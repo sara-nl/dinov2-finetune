@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Union
 
 import torch
 import numpy as np
@@ -9,8 +9,8 @@ def visualize_overlay(
     images: torch.Tensor,
     masks: torch.Tensor,
     n_classes: int,
-    filename: Optional[str | None] = None,
-) -> Optional[None | np.ndarray]:
+    filename: Optional[Union[str, None]] = None,
+) -> Optional[Union[None, np.ndarray]]:
     """Overlaying the images with the mask labels
 
     Args:

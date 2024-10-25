@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Union
 
 import torch
 
@@ -6,7 +6,7 @@ import torch
 def compute_iou_metric(
     y_hat: torch.Tensor,
     y: torch.Tensor,
-    ignore_index: Optional[int | None] = None,
+    ignore_index: Optional[Union[int, None]] = None,
     eps: float = 1e-6,
 ) -> float:
     """Compute the Intersection over Union metric for the predictions and labels.
